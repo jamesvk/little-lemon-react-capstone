@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,159 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* =========================
+     SPACING (8pt grid system)
+  ========================== */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* =========================
+     SIZING (icons, logos, UI)
+  ========================== */
+  --size-xs: 16px;
+  --size-sm: 24px;
+  --size-md: 40px;
+  --size-lg: 64px;
+  --size-xl: 96px;
+  --size-2xl: 128px;
+  --size-3xl: 160px;
+  --size-4xl: 200px;
+
+  /* Logo defaults */
+  --logo-mobile: 100px;
+  --logo-tablet: 120px;
+  --logo-desktop: 140px;
+
+  /* =========================
+     CONTAINER WIDTHS
+  ========================== */
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+
+  /* =========================
+     FONT SIZES (Type scale)
+  ========================== */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 60px;
+
+  /* Line heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Font weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* =========================
+     BORDER RADIUS
+  ========================== */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* =========================
+     BORDERS
+  ========================== */
+  --border-thin: 1px;
+  --border-thick: 2px;
+
+  /* =========================
+     SHADOWS
+  ========================== */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.12);
+  --shadow-xl: 0 12px 24px rgba(0,0,0,0.16);
+
+  /* =========================
+     Z-INDEX SCALE
+  ========================== */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-tooltip: 500;
+
+  /* =========================
+     TRANSITIONS
+  ========================== */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+   /* Type sizes */
+  --fs-display: 40px;     /* “Regular 40pt” */
+  --fs-subtitle: 18px;    /* “Medium 18pt” */
+  --fs-card-title: 18px;  /* 18pt bold */
+  --fs-body: 16px;        /* paragraph */
+  --fs-highlight: 16px;   /* price/highlight text */
+  --fs-nav: 18px;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-semibold: 600;
+
+  /* Line height */
+  --lh-body: 1.5;
+
+  /* Readability */
+  --measure: 65ch; /* max characters per line */
+
+  /* Fonts */
+  /* Primary brand serif */
+  --font-primary: "Markazi Text", Georgia, serif;
+
+  /* Secondary UI sans */
+  --font-secondary: "Karla", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Brand palette */
+  --color-green: #495E57;
+  --color-yellow: #F4CE14;
+  --color-peach: #EE9972;
+  --color-peach-light: #FBDABB;
+  --color-gray-light: #EDEFEE;
+  --color-gray-dark: #333333;
 }

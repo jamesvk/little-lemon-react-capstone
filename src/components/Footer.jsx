@@ -1,40 +1,45 @@
 export default function Footer() {
     return (
-        <footer>
-            {/* Logo placeholder */}
-            <section>
-                <img src="" alt="Company logo coming soon" />
-            </section>
+        <footer className="footer">
+            <div className="container">
+                {/* Logo placeholder */}
+                <section className="footer-brand">
+                    <img src="" alt="Company logo coming soon" />
+                </section>
 
-            {/* Navigation */}
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservations">Reservations</a></li>
-                <li><a href="/order">Order Online</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
+                {/* Navigation */}
+                <nav aria-label="Footer navigation">
+                    <ul className="footer-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/menu">Menu</a></li>
+                        <li><a href="/reservations">Reservations</a></li>
+                        <li><a href="/order">Order Online</a></li>
+                        <li><a href="/login">Login</a></li>
+                    </ul>
+                </nav>
 
-            {/* Contact */}
-            <address>
-                <h3>Contact</h3>
-                <p>Address TBD</p>
-                <p>Address TBD</p>
-                <p>Phone TBD</p>
-                <p>Email TBD</p>
-            </address>
+                <section className="footer-contact" aria-label="Contact">
+                    {/* Contact */}
+                    <h3>Contact</h3>
+                    <address>
+                        <p>123 Cuisine Avenue</p>
+                        <p>Chicago, IL 60607</p>
+                        <p>littlelemon@email.com</p>
+                    </address>
+                </section>
 
-            {/* Social */}
-            <section>
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">INSTAGRAM</a></li>
-                    <li><a href="#">FACEBOOK</a></li>
-                    <li><a href="#">GOOGLE</a></li>
-                    <li><a href="#">YELP</a></li>
-                </ul>
-            </section>
+                {/* Social */}
+                <section className="footer-social" aria-label="Social links">
+                    <h3>Follow Us</h3>
+                    <ul className="footer-socials">
+                        <li><a href="#">INSTAGRAM</a></li>
+                        <li><a href="#">FACEBOOK</a></li>
+                        <li><a href="#">GOOGLE</a></li>
+                        <li><a href="#">YELP</a></li>
+                    </ul>
+                </section>
+            </div>
         </footer>
     )
 }
