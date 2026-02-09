@@ -4,12 +4,12 @@ export default function Footer() {
             <div className="container">
                 {/* Logo placeholder */}
                 <section className="footer-brand">
-                    <img src="" alt="Company logo coming soon" />
+                    <img className="header_logo" src="/Images/capstone_little_lemon_vibe.png" alt="Logo"/>
                 </section>
 
                 {/* Navigation */}
-                <nav aria-label="Footer navigation">
-                    <ul className="footer-nav">
+                <nav className="footer-nav" aria-label="Footer navigation">
+                    <ul className="footer-navs">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/menu">Menu</a></li>
@@ -23,9 +23,9 @@ export default function Footer() {
                     {/* Contact */}
                     <h3>Contact</h3>
                     <address>
-                        <p>123 Cuisine Avenue</p>
-                        <p>Chicago, IL 60607</p>
-                        <p>littlelemon@email.com</p>
+                        <p>123 CUISINE AVE</p>
+                        <p>CHICAGO, IL 60607</p>
+                        <p>LL@GMAILSAMP.COM</p>
                     </address>
                 </section>
 
