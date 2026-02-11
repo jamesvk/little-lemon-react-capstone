@@ -186,14 +186,6 @@ button:focus-visible {
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-   /* Type sizes */
-  --fs-display: 40px;     /* “Regular 40pt” */
-  --fs-subtitle: 18px;    /* “Medium 18pt” */
-  --fs-card-title: 18px;  /* 18pt bold */
-  --fs-body: 16px;        /* paragraph */
-  --fs-highlight: 16px;   /* price/highlight text */
-  --fs-nav: 18px;
-
   /* Weights */
   --fw-regular: 400;
   --fw-medium: 500;

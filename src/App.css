@@ -41,17 +41,20 @@
   color: #888;
 } */
 
+/***********************************************/
+/*-------------------Mobile--------------------*/
 .app-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 var(--space-4);
+  max-width: 100%;
+  margin: 0;
+  /* padding: 0 var(--space-4); */
 }
-
+/********************/
+/* ---- Header ---- */
 .header_inner {
   display: flex;
   flex-direction: column;
@@ -59,7 +62,7 @@
   align-items: center;
   gap: var(--space-4);
   padding: 0;
-  margin-block: var(--space-7);
+  margin-block: var(--space-3);
 }
 
 .header_logo {
@@ -87,13 +90,215 @@
   width: 100%;
   /* padding: var(--space-1) var(--space-3); */
   font-family: var(--font-secondary);
-  font-weight: var(--fw-semibold);
-  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  font-size: var(--text-base);
   text-decoration: none;
   color: var(--color-gray-dark);
   gap: var(--space-1);
 }
 
+/******************/
+/* ---- Main ---- */
+/* -- Hero -- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.hero {
+  /* background-color: var(--color-green); */
+  background-image: url("/Images/serve_lg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-content {
+  gap: var(--space-4);
+}
+
+.hero-content,
+.hero-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1,
+.hero-content h2 {
+  font-family: var(--font-primary);
+}
+
+.hero-content h1 {
+  font-size: var(--text-2xl);
+  color: var(--color-yellow);
+  margin-bottom: 0;
+}
+
+.hero-content h2 {
+  font-size: var(--text-lg);
+  color: var(--color-gray-light);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+.hero-content p {
+  font-family: var(--font-secondary);
+  color: var(--color-gray-light);
+  font-size: var(--text-md);
+  font-weight: 300;
+  margin-inline: var(--space-8);
+  margin-top: var(--space-2);
+}
+
+.hero-btn-primary {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-sm);
+  color: var(--color-gray-dark);
+  text-decoration: none;
+  display: inline-block; /* Makes an element sit inline like text while still allowing width, height, padding, and margin to be applied. */
+  width: fit-content; /* Shrinks (or grows) the element’s width to fit its content exactly, without stretching to fill the container. */
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--color-yellow);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-5);
+}
+
+.hero-content img {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/**********************/
+/*---- Highlights ----*/
+
+.highlights {
+  background-color: rgba(238, 153, 114, .3);
+}
+
+.highlights .container,
+.highlights-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.highlights-header h1 {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  margin-block: var(--space-2);
+}
+
+.highlights-header a {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-sm);
+  color: var(--color-gray-dark);
+  display: inline-block; /* Makes an element sit inline like text while still allowing width, height, padding, and margin to be applied. */
+  width: fit-content; /* Shrinks (or grows) the element’s width to fit its content exactly, without stretching to fill the container. */
+  padding: var(--space-3) var(--space-5);
+  text-decoration: none;
+  background-color: var(--color-yellow);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-3);
+}
+
+.highlights-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.special-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  /* background-color: var(--color-gray-light); */
+  background-color: white;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  outline: 1px solid rgba(244, 206, 20, .25);
+  box-shadow: var(--shadow-md);
+}
+
+.special-card-image {
+  max-width: 240px;
+  height: 175px;
+  overflow: hidden; /* crops overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  margin-block: var(--space-2);
+}
+
+.special-card-image img {
+  max-width: 323px;
+  height: 190px;
+  object-fit: cover; /* crop, don't distort */
+  display: block; /* Removes the small gap below images by taking 
+                  them out of inline text baseline alignment. */
+}
+
+.special-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 217.125px;
+}
+
+.special-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.special-card-header h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+}
+
+.special-card-content p {
+  margin-block: 0;
+  text-align: left;
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-regular);
+}
+
+.order-link {
+  margin-block: var(--space-2);
+}
+/* .special-card img {
+  width: 100%;
+  height: 209x;
+  object-fit: cover;
+} */
+
+
+
+/******************/
+/*---- Footer ----*/
 .footer-brand,
 .footer-nav {
   display: none;
@@ -106,11 +311,9 @@
 .footer .container {
   display: flex;
   flex-direction: column;
-  
   gap: var(--space-6);
-  padding: 0;
+  /* padding: 0; */
 }
-
 
 .footer-contact,
 .footer-social {
@@ -160,9 +363,16 @@
   letter-spacing: 0.06em;
 }
 
+/***********************************************/
+/*------------------Tablet---------------------*/
 @media (min-width: 768px) {
+
+  /******************/
+  /*---- Header ----*/
   .container {
     max-width: 720px;
+    margin-inline: auto;
+    padding: 0 var(--space-10);
   }
 
   .header .container {
@@ -170,15 +380,79 @@
     flex-direction: row;
   }
 
+  .header_logo {
+    border-radius: var(--radius-xs);
+  }
+
+  .nav {
+    margin-top: 3px;
+  }
   .nav-list {
     flex-direction: row;
     justify-content: center;
     gap: var(--space-5);
   }
 
+  .nav-list a {
+    font-size: var(--text-xs);
+  }
+
+  /******************/
+  /* ---- Main ---- */
+  /* -- Hero -- */
+  .hero {
+    background-image: none;
+    background-color: var(--color-green);
+    overflow: visible;
+  }
+
+  .hero::before {
+    content: none;
+  }
+
+  .hero .container {
+    padding-block: var(--space-1);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    position: relative;
+    /* margin-block: var(--space-10); */
+  }
+
+  .hero-text {
+    max-width: 275px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-text p {
+    margin-inline: 0;
+  }
+
+  .hero-content img {
+    display: block;
+    max-width: 249.59px;
+    max-height: 269.59px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-xs);
+    position: absolute;
+    right: 0;
+    bottom: calc(-1 * var(--space-7));
+    z-index: 2;
+  }
+
+  /******************/
+  /*---- Footer ----*/
   .footer {
     margin-block: var(--space-7);
   }
+
   .footer .container {
     flex-direction: row;
     justify-content: space-between;
@@ -188,10 +462,6 @@
   .footer-brand,
   .footer-nav {
     display: block;
-  }
-
-  .header_logo {
-    border-radius: var(--radius-xs);
   }
 
   .footer-navs {
@@ -207,13 +477,11 @@
     text-align: left;
     padding: 0;
   }
-
-  /* .footer-brand,
+}
+/* .footer-brand,
   .footer-nav {
     display: block;
   } */
-}
-
 /* @media (min-width: 1024px) {
   .container {
     max-width: 1100px;
