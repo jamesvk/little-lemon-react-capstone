@@ -166,8 +166,10 @@ button:focus-visible {
   ========================== */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-md-yellow: 0 1px 2px rgba(244,206,202, 0.08);
   --shadow-lg: 0 8px 16px rgba(0,0,0,0.12);
   --shadow-xl: 0 12px 24px rgba(0,0,0,0.16);
+
 
   /* =========================
      Z-INDEX SCALE
@@ -206,10 +208,10 @@ button:focus-visible {
   --font-secondary: "Karla", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
   /* Brand palette */
-  --color-green: #495E57;
-  --color-yellow: #F4CE14;
-  --color-peach: #EE9972;
-  --color-peach-light: #FBDABB;
-  --color-gray-light: #EDEFEE;
-  --color-gray-dark: #333333;
+ --color-green: rgba(73, 94, 87, 1);
+--color-yellow: rgba(244, 206, 20, 1);
+--color-peach: rgba(238, 153, 114, 1);
+--color-peach: rgba(251, 218, 187, 1);
+--color-gray-light: rgba(237, 239, 238, 1);
+--color-gray-dark: rgba(51, 51, 51, 1);
 }
