@@ -4,28 +4,28 @@ export const testimonials = [
   {
     image: "/Images/Olivia.png",
     firstName: "Olivia",
-    lastName: "Martinez",
+    lastName: "M.",
     rating: "⭐⭐⭐⭐⭐",
     review: "Absolutely loved the food and the atmosphere was perfect."
   },
   {
     image: "/Images/Daniel.png",
     firstName: "Daniel",
-    lastName: "Kim",
+    lastName: "K.",
     rating: "⭐⭐⭐⭐⭐",
     review: "Service was top-notch and every dish was full of flavor."
   },
   {
     image: "/Images/Sophia.png",
     firstName: "Sophia",
-    lastName: "Reynolds",
+    lastName: "R.",
     rating: "⭐⭐⭐⭐⭐",
     review: "One of the best dining experiences I’ve had in years."
   },
   {
     image: "/Images/Marcus.png",
     firstName: "Marcus",
-    lastName: "Johnson",
+    lastName: "J.",
     rating: "⭐⭐⭐⭐⭐",
     review: "Fresh ingredients, great presentation, and fantastic staff."
   }
