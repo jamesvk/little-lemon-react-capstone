@@ -411,8 +411,45 @@
   font-size: var(--text-sm);
 }
 
+
+/*************************************************/
+/*-------------------------- About-Mobile -------*/
+/* .about {
+  background-color: var(--color-green);
+} */
+
+.about-container {
+  margin-inline: auto;
+  width: 318px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-title {
+ margin-block: var(--space-5);
+}
+
+.about-text {
+  text-align: justify;
+  margin-bottom: var(--space-6);
+}
+
 /*************************************************/
 /*---------------------------- Footer-Mobile ----*/
+.footer {
+  background-color: var(--color-green);
+}
+
 .footer-brand,
 .footer-nav {
   display: none;
@@ -427,6 +464,7 @@
   flex-direction: column;
   gap: var(--space-6);
   /* padding: 0; */
+  margin-block: var(--space-3);
 }
 
 .footer-contact,
@@ -440,7 +478,7 @@
 .footer-navs {
   font-family: var(--font-primary);
   font-size: var(--var-sm);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
   font-weight: var(--fw-bold);
   margin: 0 0 var(--space-2);
 }
@@ -450,7 +488,7 @@
 .footer-navs a {
   font-family: var(--font-secondary);
   font-size: var(--fs-sm);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
 }
 
 .footer-contact address {
@@ -477,12 +515,13 @@
   letter-spacing: 0.06em;
 }
 
-/***********************************************/
-/*------------------Tablet---------------------*/
+
+/*************************************************/
+/*--------------------Tablet---------------------*/
 @media (min-width: 768px) {
 
-  /*********************************************/
-  /*--------------------- Header-Tablet -------*/
+  /***********************************************/
+  /*----------------------- Header-Tablet -------*/
   .container {
     max-width: 720px;
     margin-inline: auto;
@@ -515,9 +554,9 @@
     font-size: var(--text-xs);
   }
 
-  /*************************************************/
-  /*--------------------------- Main-Tablet -------*/
-  /* --------------------------- Hero-Tablet------ */
+  /***********************************************/
+  /*------------------------- Main-Tablet -------*/
+  /* ------------------------- Hero-Tablet------ */
   .hero {
     background-image: none;
     background-color: var(--color-green);
@@ -565,8 +604,8 @@
     z-index: 2;
   }
 
-  /**********************************************/
-  /*------------------ Highlights-Tablet -------*/
+  /***********************************************/
+  /*------------------- Highlights-Tablet -------*/
 
   .highlights-header {
     width: 100%;
@@ -615,8 +654,8 @@
     font-size: var(--text-base);
   }
 
-  /********************************************/
-  /*-------------- Testimonials-Tablet -------*/
+  /***********************************************/
+  /*----------------- Testimonials-Tablet -------*/
   .testimonial-container {
     padding-bottom: var(--space-4);
   }
@@ -652,8 +691,8 @@
   .testimonial-review {
     font-size: var(--text-xs);
   }
-  /********************************************/
-  /*--------------------- Footer-Tablet -------*/
+  /***********************************************/
+  /*----------------------- Footer-Tablet -------*/
   .footer {
     margin-block: var(--space-7);
   }

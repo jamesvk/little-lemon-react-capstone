@@ -1,7 +1,7 @@
 import Hero from "../sections/Hero";
 import Highlights from "../sections/Highlights";
 import Testimonials from "../sections/Testimonials";
-// import AboutSection from "../sections/AboutSection";
+import AboutSection from "../sections/AboutSection";
 
 export default function HomePage() {
     return (
@@ -9,7 +9,7 @@ export default function HomePage() {
             <Hero />
             <Highlights />
             <Testimonials />
-            {/* <AboutSection /> */}
+            <AboutSection />
         </>
     )
 }

@@ -5,7 +5,7 @@ first one that matches the current URL, while each <Route>
 defines a specific path-to-component mapping—meaning it tells
 the app what UI/component to display when the browser URL matches that route. */
 import HomePage from "../pages/HomePage";
-// import AboutPage from "./pages/AboutPage";
+import AboutPage from "../pages/AboutPage";
 import MenuPage from "../pages/MenuPage";
 import BookingPage from "../pages/BookingPage";
 import OrderOnlinePage from "../pages/OrderOnlinePage";
@@ -16,7 +16,7 @@ export default function Main() {
         <main>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                {/* <Route path="/about" element={<AboutPage />} /> */}
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/menu" element={<MenuPage />} />
                 <Route path="/reservations" element={<BookingPage />} />
                 <Route path="/order" element={<OrderOnlinePage />} />
