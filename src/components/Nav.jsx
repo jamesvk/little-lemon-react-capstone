@@ -1,13 +1,17 @@
+import {Link} from "react-router-dom";
+/* Use Link instead of <a> for internal navigation to prevent full page 
+reloads (SPA routing); still style links in CSS by selecting "a". */
+
 export default function Nav() {
     return (
         <nav className="nav">
             <ul className="nav-list">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/menu">MENU</a></li>
-                <li><a href="/reservations">RESERVATIONS</a></li>
-                <li><a href="/order">ORDER ONLINE</a></li>
-                <li><a href="/login">LOGIN</a></li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/menu">MENU</Link></li>
+                <li><Link to="/reservations">RESERVATIONS</Link></li>
+                <li><Link to="/order">ORDER ONLINE</Link></li>
+                <li><Link to="/login">LOGIN</Link></li>
             </ul>
         </nav>
     )
