@@ -414,9 +414,11 @@
 
 /*************************************************/
 /*-------------------------- About-Mobile -------*/
-/* .about {
-  background-color: var(--color-green);
-} */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 .about-container {
   margin-inline: auto;
@@ -470,7 +472,7 @@
 .footer-contact,
 .footer-social {
   text-align: center;
-  padding: 0;
+  /* padding: 0; */
 }
 
 .footer-contact h3,
@@ -480,6 +482,10 @@
   font-size: var(--var-sm);
   color: var(--color-gray-light);
   font-weight: var(--fw-bold);
+  margin: 0 0 var(--space-1);
+}
+
+.footer-contact h3 {
   margin: 0 0 var(--space-2);
 }
 
@@ -495,6 +501,7 @@
   font-style: normal;
   margin: 0;
 }
+
 .footer-contact p {
   font-family: var(--font-secondary);
   margin: 0;
@@ -512,8 +519,9 @@
 
 .footer-socials a {
   text-decoration: none;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
 }
+
 
 
 /*************************************************/
@@ -691,6 +699,18 @@
   .testimonial-review {
     font-size: var(--text-xs);
   }
+
+  /***********************************************/
+  /*------------------------ About-Tablet -------*/
+  .about-container {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .about-text {
+    margin-bottom: var(--space-1);
+  }
+
   /***********************************************/
   /*----------------------- Footer-Tablet -------*/
   .footer {
@@ -701,6 +721,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    /* gap: 0; */
   }
 
   .footer-brand,
@@ -708,10 +729,15 @@
     display: block;
   }
 
+  /* .footer-brand {
+    height: 150px;
+  } */
+
   .footer-navs {
     list-style: none;
     margin: 0;
   }
+
   .footer-navs a {
     text-decoration: none;
   }
@@ -721,7 +747,17 @@
     text-align: left;
     padding: 0;
   }
+
+  .footer-contact h3,
+  .footer-social h3,
+  .footer-navs,
+  .footer-contact address,
+  .footer-socials a,
+  .footer-navs a {
+    font-size: 13px;
+  }
 }
+
 /* .footer-brand,
   .footer-nav {
     display: block;
@@ -731,3 +767,6 @@
     max-width: 1100px;
   }
 } */
+/* 
+.container { outline: 2px solid red; }
+.about-container { outline: 2px solid blue; } */
