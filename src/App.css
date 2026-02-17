@@ -58,7 +58,7 @@
 /*************************************************/
 /* --------------------- Header-Mobile --------- */
 .header {
-  background-color: rgba(251, 218, 187, .7);
+  background-color: rgba(251, 218, 187, .2);
 }
 .header_inner {
   display: flex;
@@ -438,7 +438,7 @@
 }
 
 .about-title {
- margin-block: var(--space-5);
+ margin-block: var(--space-4);
 }
 
 .about-text {
@@ -714,13 +714,14 @@
   /***********************************************/
   /*----------------------- Footer-Tablet -------*/
   .footer {
-    margin-block: var(--space-7);
+    margin-block: var(--space-5);
   }
 
   .footer .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: var(--space-2);
     /* gap: 0; */
   }
 
