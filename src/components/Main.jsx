@@ -16,18 +16,22 @@ import MenuPage from "../pages/MenuPage";
 import BookingPage from "../pages/BookingPage";
 import OrderOnlinePage from "../pages/OrderOnlinePage";
 // import LoginPage from "./pages/LoginPage";
-import {fetchAPI} from "../api"
+import ConfirmedBookingPage from "../pages/ConfirmedBookingPage";
+import {fetchAPI, submitAPI} from "../api"
+import {useNavigate} from "react-router-dom";
+
+const STORAGE_KEY = "bookings";
 
 function updateTimes(state, action) {
-        switch(action.type) {
-            case "UPDATE_TIMES": {
-                const newTimes = fetchAPI(action.date);
-                return newTimes;
-            }
-            default:
-                return state;
+    switch(action.type) {
+        case "UPDATE_TIMES": {
+            const newTimes = fetchAPI(action.date);
+            return newTimes;
         }
+        default:
+            return state;
     }
+}
 
 function initializeTimes() {
     const today = new Date();
@@ -47,6 +51,19 @@ export default function Main() {
     performance and prevents unnecessary recomputation, especially when the initial state
     requires expensive calculations or data preparation. */
 
+    const navigate = useNavigate();
+
+    function submitForm(formData) {
+    const success = submitAPI(formData);
+
+    if (success) {
+        const existing = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        const updated = [...existing, formData]
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
+
+        navigate("/confirmed", {state: updated});
+    }
+}
 
     return (
         <main>
@@ -59,10 +76,12 @@ export default function Main() {
                     element={<BookingPage
                         availableTimes={availableTimes}
                         dispatch={dispatch}
+                        submitForm={submitForm}
                     />}
                 />
                 <Route path="/order" element={<OrderOnlinePage />} />
                 {/* <Route path="/login" element={<LoginPage />} /> */}
+                <Route path="/confirmed" element={<ConfirmedBookingPage />} />
             </Routes>
         </main>
     )

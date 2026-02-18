@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function BookingForm({availableTimes, dispatch, onAddBooking}) {
+export default function BookingForm({availableTimes, dispatch,submitForm}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
     const [guests, setGuests] = useState(1);
@@ -9,7 +9,8 @@ export default function BookingForm({availableTimes, dispatch, onAddBooking}) {
     function handleSubmit(e) {
         e.preventDefault();
         const booking = {date, time, guests, occasion};
-        onAddBooking(booking);
+        // onAddBooking(booking);
+        submitForm(booking);
     }
     /* Prevent the browser’s default form submission behavior
     (page reload) so React can handle the submit event, preserve state,
