@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function BookingForm({availableTimes, dispatch}) {
+export default function BookingForm({availableTimes, dispatch, onAddBooking}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
     const [guests, setGuests] = useState(1);
@@ -8,8 +8,8 @@ export default function BookingForm({availableTimes, dispatch}) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        // Sending this later to an API
-        console.log({date, time, guests, occasion});
+        const booking = {date, time, guests, occasion};
+        onAddBooking(booking);
     }
     /* Prevent the browser’s default form submission behavior
     (page reload) so React can handle the submit event, preserve state,
@@ -24,7 +24,15 @@ export default function BookingForm({availableTimes, dispatch}) {
                 type="date"
                 id="res-date"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                onChange={(e) => {
+                    const selectedDate = e.target.value;
+                    setDate(selectedDate);
+
+                    dispatch({
+                        type:"UPDATE_TIMES",
+                        date: new Date(selectedDate)
+                    })
+                }}
             />
 
             <label htmlFor="res-time">Choose time</label>

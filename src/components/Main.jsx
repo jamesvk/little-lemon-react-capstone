@@ -16,18 +16,22 @@ import MenuPage from "../pages/MenuPage";
 import BookingPage from "../pages/BookingPage";
 import OrderOnlinePage from "../pages/OrderOnlinePage";
 // import LoginPage from "./pages/LoginPage";
+import {fetchAPI} from "../api"
 
 function updateTimes(state, action) {
         switch(action.type) {
-            case "UPDATE_TIMES":
-                return state; //placeholder for now
+            case "UPDATE_TIMES": {
+                const newTimes = fetchAPI(action.date);
+                return newTimes;
+            }
             default:
                 return state;
         }
     }
 
 function initializeTimes() {
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]
+    const today = new Date();
+    return fetchAPI(today);
 }
 
 export default function Main() {
