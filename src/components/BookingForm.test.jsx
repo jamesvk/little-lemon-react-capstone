@@ -16,30 +16,27 @@ test("Renders the Choose date label", () => {
     expect(labelElement).toBeInTheDocument();
 })
 
-test("BookingForm can be submitted by the user", async () => {
-    const user = userEvent.setup();
+test("BookingForm calls submitForm with form data on submit", async () => {
+  const user = userEvent.setup();
+  const submitForm = vi.fn();
 
-    const logSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+  render(
+    <BookingForm
+      availableTimes={["17:00", "18:00"]}
+      dispatch={() => {}}
+      submitForm={submitForm}
+    />
+  );
 
-    render(
-        <BookingForm
-            availableTimes={["17:00", "18:00"]}
-            dispatch={() => {}}
-        />
-    )
+  await user.click(screen.getByDisplayValue("Make Your Reservation"));
 
-    await user.click(screen.getByDisplayValue("Make Your Reservation"));
-
-    expect(logSpy).toHaveBeenCalledTimes(1);
-
-    expect(logSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-        date: "",
-        time: "17:00",
-        guests: 1,
-        occasion: "Birthday",
-        })
-    );
-
-    logSpy.mockRestore();
-})
+  expect(submitForm).toHaveBeenCalledTimes(1);
+  expect(submitForm).toHaveBeenCalledWith(
+    expect.objectContaining({
+      date: "",
+      time: "17:00",
+      guests: 1,
+      occasion: "Birthday",
+    })
+  );
+});

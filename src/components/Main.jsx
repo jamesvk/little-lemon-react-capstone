@@ -22,7 +22,7 @@ import {useNavigate} from "react-router-dom";
 
 const STORAGE_KEY = "bookings";
 
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
     switch(action.type) {
         case "UPDATE_TIMES": {
             const newTimes = fetchAPI(action.date);
@@ -33,7 +33,7 @@ function updateTimes(state, action) {
     }
 }
 
-function initializeTimes() {
+export function initializeTimes() {
     const today = new Date();
     return fetchAPI(today);
 }
