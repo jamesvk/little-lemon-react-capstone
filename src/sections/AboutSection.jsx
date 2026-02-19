@@ -1,6 +1,6 @@
 export default function AboutSection (){
     return (
-        <section className="about">
+        <section className="about" aria-labelledby="about-heading">
             <div className="container about-container">
                 <h1 className="about-title">Our Story</h1>
                 <div className="about-image">

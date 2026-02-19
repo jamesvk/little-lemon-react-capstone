@@ -11,7 +11,7 @@ which React Router then matches to a route and renders the corresponding page co
 
 function App() {
   return (
-    <div className="app-layout">
+    <div className="app-layout" aria-label="App Layout">
       <Header/>
       <Main />
       <Footer/>

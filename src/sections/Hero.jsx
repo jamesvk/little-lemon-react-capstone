@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export default function Hero() {
     return (
-        <section className="hero">
+        <section className="hero" aria-labelledby="hero-heading">
             <div className="container">
                 <div className="hero-content">
                     <div className="hero-text">

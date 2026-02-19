@@ -66,7 +66,7 @@ export default function Main() {
 }
 
     return (
-        <main>
+        <main id="main-content" aria-label="Main content">
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
