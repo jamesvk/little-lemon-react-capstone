@@ -4,7 +4,7 @@ reloads (SPA routing); still style links in CSS by selecting "a". */
 
 export default function Nav() {
     return (
-        <nav className="nav">
+        <nav className="nav" aria-label="Primary navigation">
             <ul className="nav-list">
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>

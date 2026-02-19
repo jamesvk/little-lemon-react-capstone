@@ -5,11 +5,11 @@ import AboutSection from "../sections/AboutSection";
 
 export default function HomePage() {
     return (
-        <>
+        <section aria-label="Homepage content">
             <Hero />
             <Highlights />
             <Testimonials />
             <AboutSection />
-        </>
+        </section>
     )
 }

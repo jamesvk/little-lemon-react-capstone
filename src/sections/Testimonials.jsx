@@ -33,7 +33,7 @@ export const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="testimonial">
+        <section className="testimonial" aria-labelledby="testimonials-heading">
             <div className="container testimonial-container">
                 <h1>Testimonials</h1>
                 <div className="testimonials-container">

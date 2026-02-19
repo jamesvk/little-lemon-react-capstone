@@ -3,7 +3,7 @@ import Specials from "./Specials";
 
 export default function Highlights() {
     return (
-        <section className="highlights">
+        <section className="highlights" aria-labelledby="highlights-heading">
             <div className="container">
                 <div className="highlights-header">
                     <h1>This week's specials!</h1>
