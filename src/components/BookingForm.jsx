@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function BookingForm({availableTimes, dispatch,submitForm}) {
+export default function BookingForm({availableTimes, dispatch, submitForm}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
     const [guests, setGuests] = useState("1");

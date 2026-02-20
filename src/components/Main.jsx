@@ -61,8 +61,11 @@ export default function Main() {
         const updated = [...existing, formData]
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
 
-        navigate("/confirmed", {state: updated});
+        // navigate("/confirmed", {state: updated});
+        navigate("/confirmed");
     }
+
+    return success;
 }
 
     return (

@@ -2,15 +2,19 @@ import {useLocation, Link} from "react-router-dom";
 
 
 export default function ConfirmedBookingPage() {
-    const {state} = useLocation();
-    const booking = Array.isArray(state) ? state : [];
+    // const {state} = useLocation();
+    // const booking = Array.isArray(state) ? state : [];
 
     return (
         <section>
             <h1>Booking Confirmed</h1>
-            <p>Your reservtion has been successfully submitted.</p>
+            <p>
+                Thank you! Your reservation has been successfully submitted. 
+                You can return to the Reservations page to view your confirmed 
+                booking details.
+            </p>
 
-            {booking.length > 0 ? (
+            {/* {booking.length > 0 ? (
                     <table>
                         <thead>
                             <tr>
@@ -36,7 +40,7 @@ export default function ConfirmedBookingPage() {
                         <p>No booking details found.</p>
                         <Link to="/reservations">Back to Reservations</Link>
                     </>
-                )}
+                )} */}
         </section>
     )
 }
