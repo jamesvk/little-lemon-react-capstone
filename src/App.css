@@ -686,7 +686,8 @@ main {
   }
 
   .header {
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgba(251, 218, 187, .2);
   }
 
   .header .container {
