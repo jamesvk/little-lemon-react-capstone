@@ -41,47 +41,51 @@ export default function BookingPage({availableTimes, dispatch, submitForm}) {
     }
 
     return (
-        <section aria-label="Reservations">
+        <section className="reservations-page" aria-label="Reservations">
             {submitError && (
-                <p className="error" role="alert">
+                <p className="reservations-error error" role="alert">
                     {submitError}
                 </p>
             )}
-            <BookingForm
-                availableTimes={availableTimes}
-                dispatch={dispatch}
-                // onAddBooking={handleAddBooking}
-                submitForm={handleSubmit}
-            />
+            <div className="reservations-form">
+                <BookingForm
+                    availableTimes={availableTimes}
+                    dispatch={dispatch}
+                    // onAddBooking={handleAddBooking}
+                    submitForm={handleSubmit}
+                />
+            </div>
             {bookingData.length > 0 && (
-                <section aria-label="Confirmed bookings">
-                    <h2>Confirmed bookings</h2>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Guests</th>
-                            <th>Occasion</th>
-                            <th>Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {bookingData.map((b, i) => (
-                            <tr key={`${b.date}-${b.time}-${i}`}>
-                                <td>{b.date}</td>
-                                <td>{b.time}</td>
-                                <td>{b.guests}</td>
-                                <td>{b.occasion}</td>
-                                <td>
-                                    <button type="button" onClick={() => handleDelete(i)}>
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
+                <section className="reservations-table-section" aria-label="Confirmed bookings">
+                    <h2 className="reservations-table-title">Confirmed bookings</h2>
+                    <div className="reservations-table-wrapper">
+                        <table className="reservations-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Guests</th>
+                                    <th>Occasion</th>
+                                    <th>Cancel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {bookingData.map((b, i) => (
+                                <tr key={`${b.date}-${b.time}-${i}`}>
+                                    <td>{b.date}</td>
+                                    <td>{b.time}</td>
+                                    <td>{b.guests}</td>
+                                    <td>{b.occasion}</td>
+                                    <td>
+                                        <button type="button" onClick={() => handleDelete(i)}>
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
         )}
         </section>

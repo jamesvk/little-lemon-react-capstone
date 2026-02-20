@@ -104,6 +104,15 @@
 
 /*************************************************/
 /* ---------------------------- Main-Mobile ---- */
+main {
+  flex: 1;
+}
+
+.app-layout main {
+  flex: 1;
+  display: grid;
+}
+
 /* ------------------------------ Hero-Mobile -- */
 .hero::before {
   content: "";
@@ -444,6 +453,138 @@
 .about-text {
   text-align: justify;
   margin-bottom: var(--space-6);
+}
+
+/*************************************************/
+/*-------------------- BookingPage-Mobile -------*/
+.reservations-page {
+  margin-block: var(--space-5);
+}
+
+.reservations-table-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  margin: auto;
+}
+
+.reservations-table-title {
+  margin-bottom: var(--space-1);
+}
+
+.reservations-table-wrapper {
+  width: 100%;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 var(--space-3);
+}
+
+/* Hide header on mobile (labels shown via td::before) */
+.reservations-table thead {
+  display: none;
+}
+
+/* Each row becomes a card */
+.reservations-table tbody tr {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(51, 51, 51, .25);
+  border-radius: var(--radius-xs);
+  padding: var(--space-3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reservations-table tbody tr:nth-child(1) {
+  margin-bottom: var(--space-3); 
+}
+
+
+/* Each cell becomes a row inside the card */
+.reservations-table tbody td {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: var(--text-sm);
+}
+
+/* Remove bottom border on last cell */
+.reservations-table tbody td:nth-child(4),
+.reservations-table tbody td:last-child {
+  border-bottom: none;
+}
+
+/* Add labels */
+.reservations-table tbody td::before {
+  font-weight: 600;
+  color: var(--color-gray-dark);
+}
+
+/* Label text mapping (must match your column order) */
+.reservations-table tbody td:nth-child(1)::before { content: "Date"; }
+.reservations-table tbody td:nth-child(2)::before { content: "Time"; }
+.reservations-table tbody td:nth-child(3)::before { content: "Guests"; }
+.reservations-table tbody td:nth-child(4)::before { content: "Occasion"; }
+.reservations-table tbody td:nth-child(5)::before { content: "Cancel"; }
+
+/* Delete button styling */
+.reservations-table tbody td button {
+  padding: 3px 9px;
+  border: none;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  background: #d64545;
+  color: #fff;
+}
+
+/*************************************************/
+/*-------------------- BookingForm-Mobile -------*/
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/*************************************************/
+/*--------------- ConfirmedBooking-Mobile -------*/
+
+.confirmed-booking-page {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  flex: 1;
+  place-items: center;
+  font-family: var(--font-secondary)
+}
+
+.confirmed-booking-container {
+  border: 1px solid  rgba(51, 51, 51, .25);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-md);
+}
+
+.confirmed-booking-title {
+  text-align: center;
+  font-size: var(--text-3xl);
+}
+
+.confirmed-booking-message {
+  font-size: var(--text-xl);
+  text-align: center;
+  font-weight: var(--fw-medium);
 }
 
 /*************************************************/
