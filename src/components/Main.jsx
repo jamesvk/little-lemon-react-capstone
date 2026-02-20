@@ -54,16 +54,25 @@ export default function Main() {
     const navigate = useNavigate();
 
     function submitForm(formData) {
-    const success = submitAPI(formData);
-
-    if (success) {
         const existing = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-        const updated = [...existing, formData]
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
 
-        navigate("/confirmed", {state: updated});
+        // deny 3rd booking
+        if (existing.length >= 2) {
+            return {success: false, reason: "LIMIT_REACHED"}
+        }
+
+        const success = submitAPI(formData);
+
+        if (success) {
+            const updated = [...existing, formData]
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
+            // navigate("/confirmed", {state: updated});
+            navigate("/confirmed");
+            return {success: true};
+        }
+
+        return {success: false, reason: "SUBMIT_FAILED"};
     }
-}
 
     return (
         <main id="main-content" aria-label="Main content">
