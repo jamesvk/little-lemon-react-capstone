@@ -6,7 +6,7 @@ export default function Highlights() {
         <section className="highlights" aria-labelledby="highlights-heading">
             <div className="container">
                 <div className="highlights-header">
-                    <h1>This week's specials!</h1>
+                    <h2 id="highlights-heading">This week's specials!</h2>
                     <Link to="/menu">Online Menu</Link>
                 </div>
 

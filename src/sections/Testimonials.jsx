@@ -35,7 +35,7 @@ export default function Testimonials() {
     return (
         <section className="testimonial" aria-labelledby="testimonials-heading">
             <div className="container testimonial-container">
-                <h1>Testimonials</h1>
+                <h1 id="testimonials-heading">Testimonials</h1>
                 <div className="testimonials-container">
                     {testimonials.map(review => (
                     <TestimonialCard key={`${review.firstName}-${review.lastName}`} {...review} />

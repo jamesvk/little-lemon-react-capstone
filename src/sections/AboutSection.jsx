@@ -2,7 +2,7 @@ export default function AboutSection (){
     return (
         <section className="about" aria-labelledby="about-heading">
             <div className="container about-container">
-                <h1 className="about-title">Our Story</h1>
+                <h2 id="about-heading" className="about-title">Our Story</h2>
                 <div className="about-image">
                     <img src="./Images/Mario_and_Adrian_A.jpg" alt="Chefs Mario and Adrian"></img>
                 </div>

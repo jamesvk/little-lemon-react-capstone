@@ -1,18 +1,18 @@
 export default function TestimonialCard({firstName, lastName, image, rating, review}) {
     return (
-        <article className="testimonial-card">
+        <article className="testimonial-card" aria-labelledby={`testimonial-${firstName}-${lastName}`}>
             <div className="testimonial-card-container">
                 <div className="testimonial-card-header">
                     <div className="testimonial-card-image">
-                        <img src={image} alt={`${firstName} ${lastName}`} />
+                        <img src={image} alt={`Portrait of ${firstName} ${lastName}`}/>
                     </div>
                     <div className="testimonial-card-user">
                         <div className="testimonial-card-name">
-                            <h3 className="testimonial-name">
+                            <h3 className="testimonial-name" id={`testimonial-${firstName}-${lastName}`}>
                                 {firstName} {lastName}
                             </h3>
                         </div>
-                        <div className="testimonial-rating">
+                        <div className="testimonial-rating" aria-label={`${rating} out of 5 stars`}>
                             {rating}
                         </div>
                         <div className="testimonial-card-content">

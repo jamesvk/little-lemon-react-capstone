@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function BookingForm({availableTimes, dispatch, submitForm}) {
+export default function BookingForm({availableTimes, dispatch, submitForm, isSubmitting}) {
     // Controlled form state: each field value is stored in React state.
     // This ensures React is the single source of truth for form data.
     const [date, setDate] = useState("");
@@ -97,7 +97,7 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
                     onBlur={() => setTouched((t) => ({ ...t, date: true }))}
                 />
                 {/* Only show error if field has been touched and has an error. */}
-                {touched.date && errors.date && <p className="error" role="alert">{errors.date}</p>}
+                {touched.date && errors.date && <p className="error" role="alert" id="res-date-error">{errors.date}</p>}
             </div>
 
             <div className="form-group">
@@ -118,7 +118,7 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
                         </option>
                     ))}
                 </select>
-                {touched.time && errors.time && <p className="error" role="alert">{errors.time}</p>}
+                {touched.time && errors.time && <p className="error" role="alert" id="res-date-error">{errors.time}</p>}
             </div>
 
             <div className="form-group">
@@ -136,7 +136,7 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
                     onBlur={() => setTouched((t) => ({ ...t, guests: true }))}
                 />
                 {touched.guests && errors.guests && (
-                    <p className="error" role="alert">{errors.guests}</p>
+                    <p className="error" role="alert" id="res-date-error">{errors.guests}</p>
                 )}
             </div>
 
@@ -155,12 +155,12 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
                     <option>Anniversary</option>
                 </select>
                 {touched.occasion && errors.occasion && (
-                    <p className="error" role="alert">{errors.occasion}</p>
+                    <p className="error" role="alert" id="res-date-error">{errors.occasion}</p>
                 )}
             </div>
 
             {/* Submit button is disabled when form is invalid. */}
-            <button type="submit" disabled={!isFormValid} aria-label="On Click">
+            <button type="submit" disabled={!isFormValid || isSubmitting} aria-label="On Click">
                 Make Your Reservation
             </button>
         </form>
