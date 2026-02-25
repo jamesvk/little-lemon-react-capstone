@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="container">
                 {/* Logo placeholder */}
                 <section className="footer-brand">
-                    <img className="header_logo" src="/Images/restaurant.jpg" alt="Logo"/>
+                    <img className="header_logo" src="/Images/restaurant.jpg" alt="Little Lemon restaurant logo"/>
                 </section>
 
                 {/* Navigation */}
@@ -19,9 +19,9 @@ export default function Footer() {
                     </ul>
                 </nav>
 
-                <section className="footer-contact" aria-label="Contact">
+                <section className="footer-contact" aria-labelledby="footer-contact-heading">
                     {/* Contact */}
-                    <h3>CONTACT</h3>
+                    <h3 id="footer-contact-heading">CONTACT</h3>
                     <address>
                         <p>123 CUISINE AVE</p>
                         <p>CHICAGO, IL 60607</p>
@@ -30,8 +30,8 @@ export default function Footer() {
                 </section>
 
                 {/* Social */}
-                <section className="footer-social" aria-label="Social links">
-                    <h3>FOLLOW US</h3>
+                <section className="footer-social" aria-labelledby="footer-social-heading">
+                    <h3 id="footer-social-heading">FOLLOW US</h3>
                     <ul className="footer-socials">
                         <li><a href="#">INSTAGRAM</a></li>
                         <li><a href="#">FACEBOOK</a></li>

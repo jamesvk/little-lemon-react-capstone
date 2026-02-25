@@ -1,14 +1,9 @@
-import {useLocation, Link} from "react-router-dom";
-
-
 export default function ConfirmedBookingPage() {
-    // const {state} = useLocation();
-    // const booking = Array.isArray(state) ? state : [];
 
     return (
-        <section className="confirmed-booking-page">
+        <section className="confirmed-booking-page" aria-labelledby="confirmed-booking-heading">
             <div className="confirmed-booking-container">
-                <h1 className="confirmed-booking-title">
+                <h1 className="confirmed-booking-title" id="confirmed-booking-heading">
                     Booking Confirmed
                 </h1>
 

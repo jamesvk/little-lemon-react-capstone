@@ -6,7 +6,7 @@ export default function Hero() {
             <div className="container">
                 <div className="hero-content">
                     <div className="hero-text">
-                        <h1>Little Lemon</h1>
+                        <h1 id="hero-heading">Little Lemon</h1>
                         <h2>Chicago</h2>
                         <p>
                             We are a family-owned Mediterranean restaurant,
@@ -17,7 +17,7 @@ export default function Hero() {
                             Reserve a Table
                         </Link>
                     </div>
-                    <img src="/Images/serve_lg.jpg" alt="Restaurant Food"></img>
+                    <img src="/Images/serve_lg.jpg" alt="Dish served at Little Lemon restaurant"></img>
                 </div>
             </div>
         </section>
